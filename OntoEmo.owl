@@ -1,0 +1,2047 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#"
+     xml:base="http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:swrl="http://www.w3.org/2003/11/swrl#"
+     xmlns:swrlb="http://www.w3.org/2003/11/swrlb#"
+     xmlns:schema="http://schema.org/">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni">
+        <dc:creator>Agnese Spinella</dc:creator>
+        <rdfs:label>Ontologia delle Emozioni (OntoEmo)</rdfs:label>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/creator -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/creator"/>
+    
+
+
+    <!-- http://schema.org/image -->
+
+    <owl:AnnotationProperty rdf:about="http://schema.org/image"/>
+    
+
+
+    <!-- http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#haCitazioneLetteraria -->
+
+    <owl:AnnotationProperty rdf:about="http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#haCitazioneLetteraria">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#haFrase"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#haEmoji -->
+
+    <owl:AnnotationProperty rdf:about="http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#haEmoji">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#haSimbolo"/>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#haEmoticon -->
+
+    <owl:AnnotationProperty rdf:about="http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#haEmoticon">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#haSimbolo"/>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#haFrase -->
+
+    <owl:AnnotationProperty rdf:about="http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#haFrase"/>
+    
+
+
+    <!-- http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#haFraseGenerata -->
+
+    <owl:AnnotationProperty rdf:about="http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#haFraseGenerata">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#haFrase"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#haSimbolo -->
+
+    <owl:AnnotationProperty rdf:about="http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#haSimbolo"/>
+    
+
+
+    <!-- http://www.w3.org/2002/07/owl#minQualifiedCardinality -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2002/07/owl#minQualifiedCardinality"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#haEffettoFisiologico -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#haEffettoFisiologico">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#èEffettoFisiologicoDi"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#Emozioni"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#EffettoFisiologico"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#haEspressioneFacciale -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#haEspressioneFacciale">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#èEspressioneFaccialeDi"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#Emozioni"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#EspressioneFacciale"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#haPostura -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#haPostura">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#èPosturaDi"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#Emozioni"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#Postura"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#haTonoVoce -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#haTonoVoce">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#èTonoVoceDi"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#Emozioni"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#TonoVoce"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#potrebbeCausareAnche -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#potrebbeCausareAnche">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#potrebbeEssereCausatoDa"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#Evento"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#Emozioni"/>
+        <rdfs:comment xml:lang="it">Proprietà relativa alle emozioni che non sono immediatamente collegate all’evento ma sono evoluzioni (sono composte da) dell’emozione primaria scatenata dall’evento</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#potrebbeEssereCausatoDa -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#potrebbeEssereCausatoDa">
+        <rdfs:comment xml:lang="it">Proprietà relativa all&apos;evento che non è immediatamente collegato all&apos;emozione principale che scatena ma alle emozioni composte da altre emozioni</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#puòDiventare -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#puòDiventare">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#èCompostoDa"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#Emozioni"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#Emozioni"/>
+        <rdfs:comment xml:lang="it">Descrive in quale emozione può sfociare un&apos;altra emozione</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#puòEssereProvatoDa -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#puòEssereProvatoDa">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#puòProvare"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#Emozioni"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#Soggetto"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#puòProvare -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#puòProvare">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#Soggetto"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#Emozioni"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#èCausaDi -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#èCausaDi">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#èCausatoDa"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#Evento"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#Emozioni"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#èCausatoDa -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#èCausatoDa">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#Emozioni"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#Evento"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#èCompostoDa -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#èCompostoDa">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#Emozioni"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#Emozioni"/>
+        <rdfs:comment xml:lang="it">Descrive da quali emozioni può essere composta un&apos;emozione</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#èEffettoFisiologicoDi -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#èEffettoFisiologicoDi">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#EffettoFisiologico"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#Emozioni"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#èEspressioneFaccialeDi -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#èEspressioneFaccialeDi">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#EspressioneFacciale"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#Emozioni"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#èOppostoA -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#èOppostoA">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#Emozioni"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#Emozioni"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#èPosturaDi -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#èPosturaDi">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#Postura"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#Emozioni"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#èSimileA -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#èSimileA">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#Emozioni"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#Emozioni"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#èTonoVoceDi -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#èTonoVoceDi">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#TonoVoce"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#Emozioni"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#haFreqCardiaca -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#haFreqCardiaca"/>
+    
+
+
+    <!-- http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#haValenza -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#haValenza"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#Affanno -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#Affanno">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#EffettoFisiologico"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#Allegria -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#Allegria">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#EmozioniSecondarie"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#Alto -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#Alto">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#TonoVoce"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#Basso"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#AnimaleMammifero -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#AnimaleMammifero">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#Soggetto"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#puòProvare"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#Emozioni"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#AnimaleNonMammifero"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#AnimaleNonMammifero -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#AnimaleNonMammifero">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#Soggetto"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#puòProvare"/>
+                <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#EmozioniPrimarie"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#Ansia -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#Ansia">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#EmozioniSecondarie"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#Aperta -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#Aperta">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#Postura"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#Chiusa"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#Aritmia -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#Aritmia">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#EffettoFisiologico"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#Arrossamento -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#Arrossamento">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#EffettoFisiologico"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#Pallore"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#Basso -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#Basso">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#TonoVoce"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#BoccaSpalancata -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#BoccaSpalancata">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#EspressioneFacciale"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#Chiusa -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#Chiusa">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#Postura"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#Colpa -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#Colpa">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#EmozioniSecondarie"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#Conflitto -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#Conflitto">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#Evento"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#Delusione -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#Delusione">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#EmozioniSecondarie"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#Disgusto -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#Disgusto">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#EmozioniPrimarie"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#EffettoFisiologico -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#EffettoFisiologico">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#SintomoFisico"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#Emozioni -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#Emozioni"/>
+    
+
+
+    <!-- http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#EmozioniPrimarie -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#EmozioniPrimarie">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#Disgusto"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#Gioia"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#Paura"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#Rabbia"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#Sorpresa"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#Tristezza"/>
+                </owl:unionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#Emozioni"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#EmozioniSecondarie -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#EmozioniSecondarie">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#Emozioni"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#Empatia -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#Empatia">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#EmozioniSecondarie"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#EspressioneFacciale -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#EspressioneFacciale">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#SintomoFisico"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#Evento -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#Evento"/>
+    
+
+
+    <!-- http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#Fallimento -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#Fallimento">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#Evento"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#Fastidio -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#Fastidio">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#Evento"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#Gelosia -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#Gelosia">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#EmozioniSecondarie"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#Gioia -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#Gioia">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#EmozioniPrimarie"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#Ingiustizia -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#Ingiustizia">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#Evento"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#Invidia -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#Invidia">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#EmozioniSecondarie"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#LabbraStrette -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#LabbraStrette">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#EspressioneFacciale"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#Lacrime -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#Lacrime">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#EffettoFisiologico"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#NasoArricciato -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#NasoArricciato">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#EspressioneFacciale"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#Nostalgia -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#Nostalgia">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#EmozioniSecondarie"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#OcchiSpalancati -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#OcchiSpalancati">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#EspressioneFacciale"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#OcchiStretti"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#OcchiStretti -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#OcchiStretti">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#EspressioneFacciale"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#Orgoglio -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#Orgoglio">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#EmozioniSecondarie"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#Pallore -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#Pallore">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#EffettoFisiologico"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#Paura -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#Paura">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#EmozioniPrimarie"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#Perdita -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#Perdita">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#Evento"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#Perdono -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#Perdono">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#EmozioniSecondarie"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#Pericolo -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#Pericolo">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#Evento"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#Piacere -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#Piacere">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#Evento"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#Postura -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#Postura">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#SintomoFisico"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#Rabbia -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#Rabbia">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#EmozioniPrimarie"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#Rimpianto -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#Rimpianto">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#EmozioniSecondarie"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#SintomoFisico -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#SintomoFisico"/>
+    
+
+
+    <!-- http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#Soddisfazione -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#Soddisfazione">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#EmozioniSecondarie"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#Soggetto -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#Soggetto"/>
+    
+
+
+    <!-- http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#SopraccigliaAggrottate -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#SopraccigliaAggrottate">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#EspressioneFacciale"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#SopraccigliaAlzate"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#SopraccigliaAlzate -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#SopraccigliaAlzate">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#EspressioneFacciale"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#Sorpresa -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#Sorpresa">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#EmozioniPrimarie"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#Sorriso -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#Sorriso">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#EspressioneFacciale"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#Successo -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#Successo">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#Evento"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#Sudorazione -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#Sudorazione">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#EffettoFisiologico"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#TonoVoce -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#TonoVoce">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#SintomoFisico"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#Tremore -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#Tremore">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#EffettoFisiologico"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#Tristezza -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#Tristezza">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#EmozioniPrimarie"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#Vergogna -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#Vergogna">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#EmozioniSecondarie"/>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#Arrossamento -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#Arrossamento">
+        <rdf:type rdf:resource="http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#Arrossamento"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#Bradicardia -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#Bradicardia">
+        <rdf:type rdf:resource="http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#Aritmia"/>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#haFreqCardiaca"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">60</owl:maxQualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+            </owl:Restriction>
+        </rdf:type>
+        <rdfs:comment>Bassa frequenza, permanente o temporanea, del ritmo cardiaco (convenzionalmente al di sotto delle 60 pulsazioni al minuto).</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#Comparsa_Minaccia -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#Comparsa_Minaccia">
+        <rdf:type rdf:resource="http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#Pericolo"/>
+        <èCausaDi rdf:resource="http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#EmozioneDiPaura"/>
+        <èCausaDi rdf:resource="http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#EmozioneDiSorpresa"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#Danneggiamento_Altrui -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#Danneggiamento_Altrui">
+        <rdf:type rdf:resource="http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#Conflitto"/>
+        <èCausaDi rdf:resource="http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#EmozioneDiColpa"/>
+        <rdfs:comment xml:lang="it">L&apos;aver danneggiato un conspecifico non ostile</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#Desiderio_Oggetto_Altrui -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#Desiderio_Oggetto_Altrui">
+        <rdf:type rdf:resource="http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#Conflitto"/>
+        <èCausaDi rdf:resource="http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#EmozioneDiInvidia"/>
+        <rdfs:comment xml:lang="it">Il possesso da parte di altri di un oggetto ardentemente desiderato</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#Dispnea -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#Dispnea">
+        <rdf:type rdf:resource="http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#Affanno"/>
+        <rdfs:comment>Difficoltà, permanente o occasionale, della respirazione</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#EmozioneDiAllegria -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#EmozioneDiAllegria">
+        <rdf:type rdf:resource="http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#Allegria"/>
+        <èCompostoDa rdf:resource="http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#EmozioneDiGioia"/>
+        <èSimileA rdf:resource="http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#EmozioneDiGioia"/>
+        <haValenza>Pos</haValenza>
+        <haCitazioneLetteraria xml:lang="it">Giovedì fu una bella giornata! Era la festa del babbo! Non occorre dirti che sin dallo spuntar del giorno tutta la nostra famigliuola era in moto e la nostra casetta riboccante di gioia e di allegria. La mamma aveva già fatto tirare il collo a un tacchino e sorvegliava ai preparativi del desinare. Giuditta avea regalato al babbo un bel berretto di seta, che aveva ricamato di nascosto per fargliene una sorpresa; io non potei far altro che recargli un bel mazzo di fiori di campo, che avevo raccolti all’alba ed erano ancora umidi di rugiada. Era un povero mazzolino il mio; ma il buon padre gradì il mio regalo quanto quello di mia sorella e ci abbracciò entrambe colle lagrime agli occhi.
+[Giovanni Verga, Storia di una capinera]</haCitazioneLetteraria>
+        <haEmoji>😀
+😁
+😄</haEmoji>
+        <haEmoticon>:‑D
+:-))</haEmoticon>
+        <haFraseGenerata>&quot;Sono così felice che il mio cuore sorride e ogni fibra del mio essere è piena di gioia contagiosa!&quot;</haFraseGenerata>
+        <rdfs:comment xml:lang="it">Contentezza, buon umore, anche di più persone insieme, che si esterna in modo vivace e spesso rumoroso</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#EmozioneDiAnsia -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#EmozioneDiAnsia">
+        <rdf:type rdf:resource="http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#Ansia"/>
+        <èCompostoDa rdf:resource="http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#EmozioneDiPaura"/>
+        <haValenza>Neg</haValenza>
+        <haEmoji>😟
+😩
+😕
+😬</haEmoji>
+        <haEmoticon>:S
+:‑/</haEmoticon>
+        <haFraseGenerata>&quot;Ero tanto agitato che mi sembrava di sentire battere il cuore non solo nel petto ma anche in ogni altro punto del corpo.&quot;</haFraseGenerata>
+        <rdfs:comment xml:lang="it">Stato di agitazione, di forte apprensione, dovuto a timore, incertezza, attesa di qualcosa</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#EmozioneDiColpa -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#EmozioneDiColpa">
+        <rdf:type rdf:resource="http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#Colpa"/>
+        <èCompostoDa rdf:resource="http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#EmozioneDiDelusione"/>
+        <èCompostoDa rdf:resource="http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#EmozioneDiRimpianto"/>
+        <èCompostoDa rdf:resource="http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#EmozioneDiTristezza"/>
+        <èOppostoA rdf:resource="http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#EmozioneDiOrgoglio"/>
+        <haValenza>Neg</haValenza>
+        <haCitazioneLetteraria xml:lang="it">Se tradimenti hai fatti alla tua vita
+già mille volte, a questa datti pace:
+tu non farai di qui già mai partita
+per nessun modo, traditor verace,
+ch’ogni tua colpa vecchia fia punita,
+ché ’l traditor per nulla non mi piace,
+e piglierotti al gozzo col capresto. 
+E preselo e legar lo fece presto.
+[Luigi Pulci, Il Morgante]</haCitazioneLetteraria>
+        <haEmoji>😥</haEmoji>
+        <haFraseGenerata>&quot;Ho sbagliato, avrei dovuto fare di più per evitarlo.&quot;</haFraseGenerata>
+        <rdfs:comment xml:lang="it">la coscienza che un individuo ha della propria colpevolezza o responsabilità di un male commesso, o che crede, anche ingiustificatamente, di aver causato, e che talvolta si manifesta con un patologico bisogno di punizione. In senso generico, anche con riferimento a fatti di poco conto, sensazione di rimorso.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#EmozioneDiDelusione -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#EmozioneDiDelusione">
+        <rdf:type rdf:resource="http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#Delusione"/>
+        <èCompostoDa rdf:resource="http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#EmozioneDiTristezza"/>
+        <haValenza>Neg</haValenza>
+        <haEmoji>😣
+😖</haEmoji>
+        <haEmoticon>T_T</haEmoticon>
+        <haFraseGenerata>&quot;Ero convinto di avere trovato la felicità, invece mi ritrovo con il vuoto dentro.&quot;</haFraseGenerata>
+        <rdfs:comment xml:lang="it">Sentimento di amarezza di chi vede che la realtà non corrisponde alle sue speranze:</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#EmozioneDiDisgusto -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#EmozioneDiDisgusto">
+        <rdf:type rdf:resource="http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#Disgusto"/>
+        <haEffettoFisiologico rdf:resource="http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#Pallore"/>
+        <haEffettoFisiologico rdf:resource="http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#SudorazioneFredda"/>
+        <haEffettoFisiologico rdf:resource="http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#Tremore"/>
+        <haEspressioneFacciale rdf:resource="http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#LabbraTese"/>
+        <haEspressioneFacciale rdf:resource="http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#NasoArricciato"/>
+        <haEspressioneFacciale rdf:resource="http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#OcchiStretti"/>
+        <haEspressioneFacciale rdf:resource="http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#Smorfia"/>
+        <haEspressioneFacciale rdf:resource="http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#SopraccigliaAggrottate"/>
+        <haPostura rdf:resource="http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#PosturaRigida"/>
+        <haFreqCardiaca rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">59</haFreqCardiaca>
+        <haValenza>Neg</haValenza>
+        <schema:image rdf:resource="https://raw.githubusercontent.com/AgneseSpinella/Ontologia2/main/2.jpg"/>
+        <haEmoji>🤢 
+😖
+😷</haEmoji>
+        <haEmoticon>D:&lt;</haEmoticon>
+        <haFraseGenerata rdf:datatype="http://www.w3.org/2001/XMLSchema#string">&quot;La vista di quella scena mi fa venire la pelle d&apos;oca&quot;</haFraseGenerata>
+        <rdfs:comment xml:lang="it">Sensazione sgradevole al gusto, ripugnanza fisica per cibi, bevande, ecc./Repulsione, fastidio, senso di stanchezza o di ripugnanza</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#EmozioneDiEmpatia -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#EmozioneDiEmpatia">
+        <rdf:type rdf:resource="http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#Empatia"/>
+        <haValenza>Pos</haValenza>
+        <haEmoji>🤗</haEmoji>
+        <haFraseGenerata>&quot;Ero felice di ascoltare e di sapere che qualcuno aveva compreso.&quot;</haFraseGenerata>
+        <rdfs:comment xml:lang="it">In psicologia, in generale, la capacità di comprendere lo stato d’animo e la situazione emotiva di un’altra persona, in modo immediato, prevalentemente senza ricorso alla comunicazione verbale. Più in partic., il termine indica quei fenomeni di partecipazione intima e di immedesimazione attraverso i quali si realizzerebbe la comprensione estetica.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#EmozioneDiGelosia -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#EmozioneDiGelosia">
+        <rdf:type rdf:resource="http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#Gelosia"/>
+        <èCompostoDa rdf:resource="http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#EmozioneDiRabbia"/>
+        <èCompostoDa rdf:resource="http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#EmozioneDiTristezza"/>
+        <èSimileA rdf:resource="http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#EmozioneDiInvidia"/>
+        <haValenza>Neg</haValenza>
+        <haCitazioneLetteraria xml:lang="it">Ho scritto i miei mali, ma avrei dovuto scrivere piuttosto: il mio male, perché in realtà il male, che mi aveva assalito da qualche tempo, era uno, e gli si poteva dare solo un nome: gelosia!
+[Elsa Morante, L’isola di Arturo]</haCitazioneLetteraria>
+        <haFraseGenerata>&quot;Era come se un coltello mi trafiggesse il cuore, vedendo mia moglie avvicinarsi a qualcun altro con un sorriso.&quot;</haFraseGenerata>
+        <rdfs:comment xml:lang="it">Risentimento che si prova nel vedere che altri ci è preferito o che ad altri è concesso un affetto o un vantaggio che vorremmo per noi stessi</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#EmozioneDiGioia -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#EmozioneDiGioia">
+        <rdf:type rdf:resource="http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#Gioia"/>
+        <haEffettoFisiologico rdf:resource="http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#Lacrime"/>
+        <haEffettoFisiologico rdf:resource="http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#SudorazioneCalda"/>
+        <haEspressioneFacciale rdf:resource="http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#Lacrime"/>
+        <haEspressioneFacciale rdf:resource="http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#OcchiSpalancati"/>
+        <haEspressioneFacciale rdf:resource="http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#Risata"/>
+        <haEspressioneFacciale rdf:resource="http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#SopraccigliaAlzate"/>
+        <haEspressioneFacciale rdf:resource="http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#SorrisoSmagliante"/>
+        <haPostura rdf:resource="http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#PosturaRilassata"/>
+        <haTonoVoce rdf:resource="http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#TonoFestoso"/>
+        <èOppostoA rdf:resource="http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#EmozioneDiTristezza"/>
+        <èSimileA rdf:resource="http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#EmozioneDiSorpresa"/>
+        <haFreqCardiaca rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">101</haFreqCardiaca>
+        <haValenza>Pos</haValenza>
+        <schema:image rdf:resource="https://raw.githubusercontent.com/AgneseSpinella/Ontologia2/main/3.jpg"/>
+        <haCitazioneLetteraria xml:lang="it">Mia madre, che stava versando il caffè nelle tazzine, si mise a sedere con me in braccio, e nei suoi occhi azzurri passarono rapidi guizzi di gioia.
+[Maria Teresa Di Lascia, Passaggio in ombra]</haCitazioneLetteraria>
+        <haEmoji>☺
+🙂
+😊</haEmoji>
+        <haEmoticon>:‑)
+:-&gt;</haEmoticon>
+        <haFraseGenerata rdf:datatype="http://www.w3.org/2001/XMLSchema#string">&quot;Finalmente è arrivata la primavera!&quot;</haFraseGenerata>
+        <rdfs:comment xml:lang="it">Intensa e piacevole emozione che si prova quando si è felici o quando un fine viene raggiunto o un desiderio trova appagamento</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#EmozioneDiInvidia -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#EmozioneDiInvidia">
+        <rdf:type rdf:resource="http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#Invidia"/>
+        <èCompostoDa rdf:resource="http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#EmozioneDiRabbia"/>
+        <haValenza>Neg</haValenza>
+        <haCitazioneLetteraria xml:lang="it">D’altra parte, gli indigeni (i capresi, per intenderci, o i napoletani da generazioni stabiliti a Capri) attizzano. Instancabilmente portano rametti spinosi di cattiveria, soffiano sulle grame braci dell’invidia, occhieggiano, additano, ridacchiano.
+[Mario Soldati, Lettere da Capri]</haCitazioneLetteraria>
+        <haFraseGenerata>&quot;Sarebbe bello avere il talento di quella persona. Sembra che tutto gli vada bene, mentre io continuo a lottare duramente per raggiungere i miei obiettivi&quot;</haFraseGenerata>
+        <rdfs:comment xml:lang="it">Sentimento spiacevole che si prova per un bene o una qualità altrui che si vorrebbero per sé, accompagnato spesso da avversione e rancore per colui che invece possiede tale bene o qualità; anche, la disposizione generica a provare tale sentimento, dovuta per lo più a un senso di orgoglio per cui non si tollera che altri abbia doti pari o superiori, o riesca meglio nella sua attività o abbia maggior fortuna</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#EmozioneDiNostalgia -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#EmozioneDiNostalgia">
+        <rdf:type rdf:resource="http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#Nostalgia"/>
+        <èCompostoDa rdf:resource="http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#EmozioneDiRimpianto"/>
+        <èCompostoDa rdf:resource="http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#EmozioneDiTristezza"/>
+        <haValenza>Neg</haValenza>
+        <haFraseGenerata>&quot;Quando torno in quei luoghi, mi sembra di sentire ancora il profumo dell&apos;erba bagnata dalla pioggia e il suono delle risate dei miei amici d&apos;infanzia, e mi assale un&apos;irrefrenabile nostalgia per quei giorni lontani.&quot;</haFraseGenerata>
+        <rdfs:comment xml:lang="it">Stato d’animo melanconico, causato dal desiderio di persona lontana (o non più in vita) o di cosa non più posseduta, dal rimpianto di condizioni ormai passate, dall’aspirazione a uno stato diverso dall’attuale che si configura comunque lontano:</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#EmozioneDiOrgoglio -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#EmozioneDiOrgoglio">
+        <rdf:type rdf:resource="http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#Orgoglio"/>
+        <èCompostoDa rdf:resource="http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#EmozioneDiGioia"/>
+        <èCompostoDa rdf:resource="http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#EmozioneDiSoddisfazione"/>
+        <èSimileA rdf:resource="http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#EmozioneDiSoddisfazione"/>
+        <haValenza>Pos</haValenza>
+        <haEmoji>😌
+😎</haEmoji>
+        <haFraseGenerata>&quot;Sono fiero di ciò che ho raggiunto con il mio duro lavoro e impegno. &quot;</haFraseGenerata>
+        <rdfs:comment xml:lang="it">Stima eccessiva di sé; esagerato sentimento della propria dignità, dei proprî meriti, della propria posizione o condizione sociale, per cui ci si considera superiori agli altri / Con senso attenuato (per influenza del fr. orgueil), sentimento non criticabile della propria dignità, giustificata fierezza.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#EmozioneDiPaura -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#EmozioneDiPaura">
+        <rdf:type rdf:resource="http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#Paura"/>
+        <haEffettoFisiologico rdf:resource="http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#Dispnea"/>
+        <haEffettoFisiologico rdf:resource="http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#Lacrime"/>
+        <haEffettoFisiologico rdf:resource="http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#Pallore"/>
+        <haEffettoFisiologico rdf:resource="http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#SudorazioneFredda"/>
+        <haEffettoFisiologico rdf:resource="http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#Tremore"/>
+        <haEspressioneFacciale rdf:resource="http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#Grido"/>
+        <haEspressioneFacciale rdf:resource="http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#LabbraTese"/>
+        <haEspressioneFacciale rdf:resource="http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#NasoArricciato"/>
+        <haEspressioneFacciale rdf:resource="http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#OcchiSpalancati"/>
+        <haEspressioneFacciale rdf:resource="http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#SopraccigliaAggrottate"/>
+        <haEspressioneFacciale rdf:resource="http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#SopraccigliaAlzate"/>
+        <haPostura rdf:resource="http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#PosturaRigida"/>
+        <haTonoVoce rdf:resource="http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#TonoSommesso"/>
+        <haTonoVoce rdf:resource="http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#TonoUrlante"/>
+        <haFreqCardiaca rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">101</haFreqCardiaca>
+        <haValenza>Neg</haValenza>
+        <schema:image rdf:resource="https://raw.githubusercontent.com/AgneseSpinella/Ontologia2/main/5.jpg"/>
+        <haCitazioneLetteraria xml:lang="it">‘Ntoni se ne andò tutto borioso, dondolandosi sui fianchi, con un codazzo di amici, e avrebbe voluto che tutti i giorni fosse domenica, per menare a spasso la sua camicia colle stelle; quel dopopranzo si divertirono a prendersi a pugni con compare Pizzuto, il quale non aveva paura nemmeno di Dio, sebbene non avesse fatto il soldato, e andò a rotolare per terra davanti all’osteria, col naso in sangue; ma Rocco Spatu invece fu più forte, e si mise ‘Ntoni sotto i piedi.
+[Giovanni Verga, I Malavoglia]</haCitazioneLetteraria>
+        <haEmoji>😱
+😨</haEmoji>
+        <haEmoticon>D‑&apos;:</haEmoticon>
+        <haFraseGenerata rdf:datatype="http://www.w3.org/2001/XMLSchema#string">&quot;Mi sento tremare le gambe e il cuore batte così forte da farmi credere che possa uscire dal petto.&quot;</haFraseGenerata>
+        <rdfs:comment xml:lang="it">Stato emotivo consistente in un senso di insicurezza, di smarrimento e di ansia di fronte a un pericolo reale o immaginario o dinanzi a cosa o a fatto che sia o si creda dannoso: più o meno intenso secondo le persone e le circostanze, assume il carattere di un turbamento forte e improvviso, che si manifesta anche con reazioni fisiche, quando il pericolo si presenti inaspettato, colga di sorpresa o comunque appaia imminente.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#EmozioneDiPerdono -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#EmozioneDiPerdono">
+        <rdf:type rdf:resource="http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#Perdono"/>
+        <èCompostoDa rdf:resource="http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#EmozioneDiEmpatia"/>
+        <haValenza>Pos</haValenza>
+        <haCitazioneLetteraria xml:lang="it">Le signore si spaventarono, gli uomini corsero alla fiamma del samovar, la presero e andarono a constatare da vicino l’esito del colpo. Il centro era forato come se si fosse tolta la misura col compasso. Tutti guardarono stupefatti quell’uomo, il quale con una squisita cortesia domandò perdono alle dame della repentina esplosione soggiungendo: «Volli finire con una immagine un po’ fragorosa, altrimenti non mi avreste creduto.» Nessuno ardì dubitare della verità del racconto.
+[Arrigo Boito, Le novelle]</haCitazioneLetteraria>
+        <haEmoji>🙏
+🤝</haEmoji>
+        <haFraseGenerata>&quot;E&apos; difficile perdonare, ma ho imparato che trattenere la rabbia e il dolore fa solo male a me stesso. Quindi ti perdono, anche se non dimenticherò facilmente quello che è successo.&quot;</haFraseGenerata>
+        <rdfs:comment xml:lang="it">L’atto di perdonare, il fatto di esser perdonato.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#EmozioneDiRabbia -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#EmozioneDiRabbia">
+        <rdf:type rdf:resource="http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#Rabbia"/>
+        <haEffettoFisiologico rdf:resource="http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#Arrossamento"/>
+        <haEffettoFisiologico rdf:resource="http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#Lacrime"/>
+        <haEffettoFisiologico rdf:resource="http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#OppressioneToracica"/>
+        <haEffettoFisiologico rdf:resource="http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#SudorazioneCalda"/>
+        <haEffettoFisiologico rdf:resource="http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#Tremore"/>
+        <haEspressioneFacciale rdf:resource="http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#Grido"/>
+        <haEspressioneFacciale rdf:resource="http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#NasoArricciato"/>
+        <haEspressioneFacciale rdf:resource="http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#OcchiSpalancati"/>
+        <haEspressioneFacciale rdf:resource="http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#OcchiStretti"/>
+        <haEspressioneFacciale rdf:resource="http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#SopraccigliaAggrottate"/>
+        <haEspressioneFacciale rdf:resource="http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#SopraccigliaAlzate"/>
+        <haPostura rdf:resource="http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#PosturaRigida"/>
+        <haTonoVoce rdf:resource="http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#TonoAggressivo"/>
+        <haTonoVoce rdf:resource="http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#TonoGrave"/>
+        <haTonoVoce rdf:resource="http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#TonoUrlante"/>
+        <haFreqCardiaca rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">101</haFreqCardiaca>
+        <haValenza>Neg</haValenza>
+        <schema:image rdf:resource="https://raw.githubusercontent.com/AgneseSpinella/Ontologia2/main/1.jpg"/>
+        <haCitazioneLetteraria xml:lang="it">Ma sei vecchio
+Ti chiameranno vecchio
+E tutta la tua rabbia viene su.
+Vecchio, sì
+Con quello che hai da dire
+Ma vali quattro lire
+Dovresti già morire
+Tempo non c’è n’è più.
+[Mariella Nava, Spalle al muro]</haCitazioneLetteraria>
+        <haEmoji>😠
+😤</haEmoji>
+        <haEmoticon>:@</haEmoticon>
+        <haFraseGenerata rdf:datatype="http://www.w3.org/2001/XMLSchema#string">&quot;Non posso credere che abbia fatto di nuovo questa stupidaggine&quot;</haFraseGenerata>
+        <rdfs:comment xml:lang="it">Irritazione violenta prodotta dal senso della propria impotenza o da un’improvvisa delusione o contrarietà, e che esplode in azioni e in parole incontrollate e scomposte.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#EmozioneDiRimpianto -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#EmozioneDiRimpianto">
+        <rdf:type rdf:resource="http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#Rimpianto"/>
+        <èCompostoDa rdf:resource="http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#EmozioneDiColpa"/>
+        <èCompostoDa rdf:resource="http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#EmozioneDiTristezza"/>
+        <haValenza>Neg</haValenza>
+        <rdfs:comment xml:lang="it">Ricordo nostalgico e dolente di persone o cose perdute, o di occasioni mancate.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#EmozioneDiSoddisfazione -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#EmozioneDiSoddisfazione">
+        <rdf:type rdf:resource="http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#Soddisfazione"/>
+        <èCompostoDa rdf:resource="http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#EmozioneDiGioia"/>
+        <èCompostoDa rdf:resource="http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#EmozioneDiOrgoglio"/>
+        <haValenza>Pos</haValenza>
+        <haEmoji>😌
+😁</haEmoji>
+        <rdfs:comment xml:lang="it">L’essere soddisfatto, il compiacimento e il piacere di vedere soddisfatti i proprî desiderî e le proprie passioni.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#EmozioneDiSorpresa -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#EmozioneDiSorpresa">
+        <rdf:type rdf:resource="http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#Sorpresa"/>
+        <haEffettoFisiologico rdf:resource="http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#Lacrime"/>
+        <haEffettoFisiologico rdf:resource="http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#SudorazioneCalda"/>
+        <haEspressioneFacciale rdf:resource="http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#OcchiSpalancati"/>
+        <haEspressioneFacciale rdf:resource="http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#SopraccigliaAlzate"/>
+        <haEspressioneFacciale rdf:resource="http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#SorrisoSmagliante"/>
+        <haPostura rdf:resource="http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#PosturaRilassata"/>
+        <haTonoVoce rdf:resource="http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#TonoFestoso"/>
+        <haTonoVoce rdf:resource="http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#TonoUrlante"/>
+        <haFreqCardiaca rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">101</haFreqCardiaca>
+        <haValenza>Pos</haValenza>
+        <schema:image rdf:resource="https://raw.githubusercontent.com/AgneseSpinella/Ontologia2/main/4.jpg"/>
+        <haCitazioneLetteraria xml:lang="it">Qualsiasi sorpresa per Rocco era una rottura di palle immensa. Buona o cattiva che fosse, perché la sorpresa era un deragliamento, un ostacolo improvviso davanti alla regolarità della noia esistenziale, un imprevisto che lo costringeva a reagire, a rispondere, a prendere una decisione. E sapeva anche che una sorpresa non arriva mai da sola.
+[Antonio Manzini, Pulvis et umbra]</haCitazioneLetteraria>
+        <haEmoji>😮
+😯</haEmoji>
+        <haEmoticon>:‑O</haEmoticon>
+        <haFraseGenerata rdf:datatype="http://www.w3.org/2001/XMLSchema#string">&quot;Non potevo credere ai miei occhi 😲&quot;</haFraseGenerata>
+        <rdfs:comment xml:lang="it">L’atto di sorprendere, spec. sopraggiungendo in un luogo all’improvviso, inaspettatamente.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#EmozioneDiTristezza -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#EmozioneDiTristezza">
+        <rdf:type rdf:resource="http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#Tristezza"/>
+        <haEffettoFisiologico rdf:resource="http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#Lacrime"/>
+        <haEffettoFisiologico rdf:resource="http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#OppressioneToracica"/>
+        <haEffettoFisiologico rdf:resource="http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#Pallore"/>
+        <haEspressioneFacciale rdf:resource="http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#LabbraTese"/>
+        <haEspressioneFacciale rdf:resource="http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#OcchiStretti"/>
+        <haEspressioneFacciale rdf:resource="http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#Smorfia"/>
+        <haEspressioneFacciale rdf:resource="http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#SopraccigliaAggrottate"/>
+        <haEspressioneFacciale rdf:resource="http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#SorrisoTriste"/>
+        <haPostura rdf:resource="http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#PosturaRigida"/>
+        <haTonoVoce rdf:resource="http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#TonoGrave"/>
+        <haTonoVoce rdf:resource="http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#TonoSommesso"/>
+        <haFreqCardiaca rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">59</haFreqCardiaca>
+        <haValenza>Neg</haValenza>
+        <schema:image rdf:resource="https://raw.githubusercontent.com/AgneseSpinella/Ontologia2/main/7.jpg"/>
+        <haEmoji>😫
+😩
+😢
+😞</haEmoji>
+        <haEmoticon>:‑(
+:‑c
+:&apos;(
+D;</haEmoticon>
+        <haFraseGenerata rdf:datatype="http://www.w3.org/2001/XMLSchema#string">&quot;C&apos;è un vuoto in me che sembra ingoiare ogni cosa.&quot;</haFraseGenerata>
+        <rdfs:comment xml:lang="it">Condizione, visione, fatto che affligge, che ispira sentimenti dolorosi</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#EmozioneDiVergogna -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#EmozioneDiVergogna">
+        <rdf:type rdf:resource="http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#Vergogna"/>
+        <èCompostoDa rdf:resource="http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#EmozioneDiColpa"/>
+        <èCompostoDa rdf:resource="http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#EmozioneDiDisgusto"/>
+        <èOppostoA rdf:resource="http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#EmozioneDiOrgoglio"/>
+        <haValenza>Neg</haValenza>
+        <haCitazioneLetteraria xml:lang="it">Si batteva la fronte: cinquanta metri sottoterra avrebbe voluto nascondersi per la vergogna d’essersi lasciato pigliare dalla paura – lui, dalla paura! – ma come mai, come mai, prima d’avventurarsi con la testa nel sacco, solo, a mezzanotte, in una ricognizione di quella specie, non pensare a premunirsi con lo scapolare di santa Brigida, potentissima contro tutte le arti diaboliche?
+[Remigio Zena, Quattro racconti]</haCitazioneLetteraria>
+        <haEmoji>😳
+😖</haEmoji>
+        <haEmoticon>:$</haEmoticon>
+        <rdfs:comment xml:lang="it">Sentimento più o meno profondo di turbamento e di disagio suscitato dalla coscienza o dal timore della riprovazione e della condanna (morale o sociale) di altri per un’azione, un comportamento o una situazione, che siano o possano essere oggetto di un giudizio sfavorevole, di disprezzo o di discredito.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#Esclusione_Sociale -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#Esclusione_Sociale">
+        <rdf:type rdf:resource="http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#Fallimento"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#Ingiustizia"/>
+        <èCausaDi rdf:resource="http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#EmozioneDiTristezza"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#Evento_Inaspettato -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#Evento_Inaspettato">
+        <rdf:type rdf:resource="http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#Pericolo"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#Piacere"/>
+        <èCausaDi rdf:resource="http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#EmozioneDiSorpresa"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#Grido -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#Grido">
+        <rdf:type rdf:resource="http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#BoccaSpalancata"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#Incertezza_Futuro -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#Incertezza_Futuro">
+        <rdf:type rdf:resource="http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#Pericolo"/>
+        <èCausaDi rdf:resource="http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#EmozioneDiAnsia"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#LabbraTese -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#LabbraTese">
+        <rdf:type rdf:resource="http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#LabbraStrette"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#Lacrime -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#Lacrime">
+        <rdf:type rdf:resource="http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#Lacrime"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#Mammifero1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#Mammifero1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#AnimaleMammifero"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#Minaccia_Da_Persona_Terza -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#Minaccia_Da_Persona_Terza">
+        <rdf:type rdf:resource="http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#Conflitto"/>
+        <èCausaDi rdf:resource="http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#EmozioneDiGelosia"/>
+        <rdfs:comment xml:lang="it">La minaccia all&apos;attaccamento interpersonale da parte di una terza persona</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#NasoArricciato -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#NasoArricciato">
+        <rdf:type rdf:resource="http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#NasoArricciato"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#NonMammifero1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#NonMammifero1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#AnimaleNonMammifero"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#OcchiSpalancati -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#OcchiSpalancati">
+        <rdf:type rdf:resource="http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#OcchiSpalancati"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#OcchiStretti -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#OcchiStretti">
+        <rdf:type rdf:resource="http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#OcchiStretti"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#OppressioneToracica -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#OppressioneToracica">
+        <rdf:type rdf:resource="http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#Affanno"/>
+        <rdfs:comment xml:lang="it">La sensazione di pressione o peso di chi è oppresso e il senso di peso, di disagio, di molestia, d’angoscia che ne derivano</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#Pallore -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#Pallore">
+        <rdf:type rdf:resource="http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#Pallore"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#Perdita_Oggetto_Amato -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#Perdita_Oggetto_Amato">
+        <rdf:type rdf:resource="http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#Perdita"/>
+        <èCausaDi rdf:resource="http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#EmozioneDiTristezza"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#PosturaRigida -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#PosturaRigida">
+        <rdf:type rdf:resource="http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#Chiusa"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#PosturaRilassata -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#PosturaRilassata">
+        <rdf:type rdf:resource="http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#Aperta"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#Risata -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#Risata">
+        <rdf:type rdf:resource="http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#BoccaSpalancata"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#Scomparsa_Minaccia -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#Scomparsa_Minaccia">
+        <rdf:type rdf:resource="http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#Successo"/>
+        <èCausaDi rdf:resource="http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#EmozioneDiGioia"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#Smorfia -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#Smorfia">
+        <rdf:type rdf:resource="http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#LabbraStrette"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#SopraccigliaAggrottate -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#SopraccigliaAggrottate">
+        <rdf:type rdf:resource="http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#SopraccigliaAggrottate"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#SopraccigliaAlzate -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#SopraccigliaAlzate">
+        <rdf:type rdf:resource="http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#SopraccigliaAlzate"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#SorrisoSmagliante -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#SorrisoSmagliante">
+        <rdf:type rdf:resource="http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#Sorriso"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#SorrisoTeso -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#SorrisoTeso">
+        <rdf:type rdf:resource="http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#Sorriso"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#SorrisoTriste -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#SorrisoTriste">
+        <rdf:type rdf:resource="http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#Sorriso"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#SudorazioneCalda -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#SudorazioneCalda">
+        <rdf:type rdf:resource="http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#Sudorazione"/>
+        <rdfs:comment xml:lang="it">Processo che contribuisce a eliminare dall’organismo sostanze di rifiuto e che rappresenta uno dei meccanismi fondamentali della termoregolazione</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#SudorazioneFredda -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#SudorazioneFredda">
+        <rdf:type rdf:resource="http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#Sudorazione"/>
+        <rdfs:comment xml:lang="it">La pelle diviene umida e fredda all&apos;improvviso procurando brividi e tremore in chi ne è colpito.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#Superamento_Minaccia -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#Superamento_Minaccia">
+        <rdf:type rdf:resource="http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#Successo"/>
+        <èCausaDi rdf:resource="http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#EmozioneDiGioia"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#Tachicardia -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#Tachicardia">
+        <rdf:type rdf:resource="http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#Aritmia"/>
+        <rdf:type>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#haFreqCardiaca"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">100</owl:minQualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+            </owl:Restriction>
+        </rdf:type>
+        <rdfs:comment xml:lang="it">L’aumento di frequenza delle pulsazioni cardiache oltre i 100 battiti al minuto per almeno tre cicli consecutivi.</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#TonoAggressivo -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#TonoAggressivo">
+        <rdf:type rdf:resource="http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#Alto"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#TonoBrillante -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#TonoBrillante">
+        <rdf:type rdf:resource="http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#Alto"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#TonoDolce -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#TonoDolce">
+        <rdf:type rdf:resource="http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#Basso"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#TonoFestoso -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#TonoFestoso">
+        <rdf:type rdf:resource="http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#Alto"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#TonoGrave -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#TonoGrave">
+        <rdf:type rdf:resource="http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#Basso"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#TonoSommesso -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#TonoSommesso">
+        <rdf:type rdf:resource="http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#Basso"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#TonoUrlante -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#TonoUrlante">
+        <rdf:type rdf:resource="http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#Alto"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#Trasgressione_Altrui -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#Trasgressione_Altrui">
+        <rdf:type rdf:resource="http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#Conflitto"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#Fastidio"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#Ingiustizia"/>
+        <èCausaDi rdf:resource="http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#EmozioneDiPerdono"/>
+        <èCausaDi rdf:resource="http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#EmozioneDiRabbia"/>
+        <rdfs:comment xml:lang="it">Evento di trasgressione di norme di gruppo da parte di altri</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#Trasgressione_Propria -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#Trasgressione_Propria">
+        <rdf:type rdf:resource="http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#Conflitto"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#Fastidio"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#Ingiustizia"/>
+        <èCausaDi rdf:resource="http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#EmozioneDiVergogna"/>
+        <rdfs:comment xml:lang="it">Evento che riguarda la propria trasgressione di norme di gruppo</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#Tremore -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#Tremore">
+        <rdf:type rdf:resource="http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#Tremore"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#Uomo -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#Uomo">
+        <rdf:type rdf:resource="http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#AnimaleMammifero"/>
+    </owl:NamedIndividual>
+    <rdf:Description>
+        <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">100</owl:minQualifiedCardinality>
+    </rdf:Description>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotations
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description rdf:about="http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#Arrossamento">
+        <rdfs:comment>Acquisizione di un colore rosso, rossastro</rdfs:comment>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#Lacrime">
+        <rdfs:comment xml:lang="it">Quelle che sgorgano più abbondanti per viva commozione, per dolore fisico o morale, o anche nel moto convulso del ridere</rdfs:comment>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#Pallore">
+        <rdfs:comment xml:lang="it">Il colore pallido, spec. del volto</rdfs:comment>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#Tremore">
+        <rdfs:comment xml:lang="it">Successione di movimenti oscillatorî più o meno rapidi e per lo più ritmici, involontarî e spontanei, provocati da un alternarsi di contrazioni e di rilasciamenti di gruppi muscolari antagonisti</rdfs:comment>
+    </rdf:Description>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#BoccaSpalancata"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#LabbraStrette"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#Sorriso"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#Bradicardia"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#Tachicardia"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Rules
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description rdf:about="urn:swrl:var#e">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="urn:swrl:var#a">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="urn:swrl:var#b">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="urn:swrl:var#postura">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="urn:swrl:var#x">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="urn:swrl:var#y">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="urn:swrl:var#z">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#Evento"/>
+                        <swrl:argument1 rdf:resource="urn:swrl:var#e"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#èCausaDi"/>
+                                <swrl:argument1 rdf:resource="urn:swrl:var#e"/>
+                                <swrl:argument2 rdf:resource="urn:swrl:var#a"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                <rdf:first>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#Emozioni"/>
+                                        <swrl:argument1 rdf:resource="urn:swrl:var#a"/>
+                                    </rdf:Description>
+                                </rdf:first>
+                                <rdf:rest>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                        <rdf:first>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#èCompostoDa"/>
+                                                <swrl:argument1 rdf:resource="urn:swrl:var#a"/>
+                                                <swrl:argument2 rdf:resource="urn:swrl:var#b"/>
+                                            </rdf:Description>
+                                        </rdf:first>
+                                        <rdf:rest>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                                <rdf:first>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                                                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#Emozioni"/>
+                                                        <swrl:argument1 rdf:resource="urn:swrl:var#b"/>
+                                                    </rdf:Description>
+                                                </rdf:first>
+                                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                            </rdf:Description>
+                                        </rdf:rest>
+                                    </rdf:Description>
+                                </rdf:rest>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#potrebbeCausareAnche"/>
+                        <swrl:argument1 rdf:resource="urn:swrl:var#e"/>
+                        <swrl:argument2 rdf:resource="urn:swrl:var#b"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#Emozioni"/>
+                        <swrl:argument1 rdf:resource="urn:swrl:var#a"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                                <swrl:classPredicate rdf:resource="http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#Emozioni"/>
+                                <swrl:argument1 rdf:resource="urn:swrl:var#b"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                <rdf:first>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#èCompostoDa"/>
+                                        <swrl:argument1 rdf:resource="urn:swrl:var#a"/>
+                                        <swrl:argument2 rdf:resource="urn:swrl:var#b"/>
+                                    </rdf:Description>
+                                </rdf:first>
+                                <rdf:rest>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                        <rdf:first>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#haPostura"/>
+                                                <swrl:argument1 rdf:resource="urn:swrl:var#b"/>
+                                                <swrl:argument2 rdf:resource="urn:swrl:var#postura"/>
+                                            </rdf:Description>
+                                        </rdf:first>
+                                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                    </rdf:Description>
+                                </rdf:rest>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#haPostura"/>
+                        <swrl:argument1 rdf:resource="urn:swrl:var#a"/>
+                        <swrl:argument2 rdf:resource="urn:swrl:var#postura"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#Emozioni"/>
+                        <swrl:argument1 rdf:resource="urn:swrl:var#x"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#èSimileA"/>
+                                <swrl:argument1 rdf:resource="urn:swrl:var#x"/>
+                                <swrl:argument2 rdf:resource="urn:swrl:var#y"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                <rdf:first>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#èOppostoA"/>
+                                        <swrl:argument1 rdf:resource="urn:swrl:var#x"/>
+                                        <swrl:argument2 rdf:resource="urn:swrl:var#z"/>
+                                    </rdf:Description>
+                                </rdf:first>
+                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#èOppostoA"/>
+                        <swrl:argument1 rdf:resource="urn:swrl:var#y"/>
+                        <swrl:argument2 rdf:resource="urn:swrl:var#z"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#Emozioni"/>
+                        <swrl:argument1 rdf:resource="urn:swrl:var#x"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#haFreqCardiaca"/>
+                                <swrl:argument1 rdf:resource="urn:swrl:var#x"/>
+                                <swrl:argument2 rdf:resource="urn:swrl:var#y"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                <rdf:first>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#BuiltinAtom"/>
+                                        <swrl:builtin rdf:resource="http://www.w3.org/2003/11/swrlb#greaterThan"/>
+                                        <swrl:arguments>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                <rdf:first rdf:resource="urn:swrl:var#y"/>
+                                                <rdf:rest>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                        <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">100</rdf:first>
+                                                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                                    </rdf:Description>
+                                                </rdf:rest>
+                                            </rdf:Description>
+                                        </swrl:arguments>
+                                    </rdf:Description>
+                                </rdf:first>
+                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#haEffettoFisiologico"/>
+                        <swrl:argument1 rdf:resource="urn:swrl:var#x"/>
+                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#Tachicardia"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#Emozioni"/>
+                        <swrl:argument1 rdf:resource="urn:swrl:var#x"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#haFreqCardiaca"/>
+                                <swrl:argument1 rdf:resource="urn:swrl:var#x"/>
+                                <swrl:argument2 rdf:resource="urn:swrl:var#y"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                <rdf:first>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#BuiltinAtom"/>
+                                        <swrl:builtin rdf:resource="http://www.w3.org/2003/11/swrlb#lessThan"/>
+                                        <swrl:arguments>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                <rdf:first rdf:resource="urn:swrl:var#y"/>
+                                                <rdf:rest>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                        <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">60</rdf:first>
+                                                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                                    </rdf:Description>
+                                                </rdf:rest>
+                                            </rdf:Description>
+                                        </swrl:arguments>
+                                    </rdf:Description>
+                                </rdf:first>
+                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#haEffettoFisiologico"/>
+                        <swrl:argument1 rdf:resource="urn:swrl:var#x"/>
+                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/agnes/ontologies/2023/3/ontologia_emozioni#Bradicardia"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+
